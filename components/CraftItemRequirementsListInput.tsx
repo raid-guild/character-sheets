@@ -269,7 +269,7 @@ const CraftItemRequirementInput: React.FC<InputProps> = ({
               min={0}
               placeholder="Amount"
               value={amount}
-              onChange={e => setAmount(e.target.value)}
+              onChange={e => setAmount(e.target.value.split('.')[0])}
               isInvalid={amountInvalid && showError}
               isDisabled={items.length === 0}
               h="2.7125rem"

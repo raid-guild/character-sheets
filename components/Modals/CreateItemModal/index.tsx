@@ -331,7 +331,7 @@ export const CreateItemModal: React.FC = () => {
       name: itemName,
       description: itemDescription,
       image: itemEmblemFileName
-        ? getImageUri(itemEmblemFileName)[0]
+        ? getImageUri(itemEmblemFileName)
         : itemEmblem
           ? URL.createObjectURL(itemEmblem)
           : '',

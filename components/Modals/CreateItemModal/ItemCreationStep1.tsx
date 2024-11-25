@@ -124,7 +124,7 @@ export const ItemCreationStep1: React.FC<Step1Props> = ({
       <FormControl isInvalid={showError && !itemSupply}>
         <FormLabel>Item Supply</FormLabel>
         <Input
-          onChange={e => setItemSupply(e.target.value)}
+          onChange={e => setItemSupply(e.target.value.split('.')[0])}
           type="number"
           value={itemSupply}
         />
@@ -153,7 +153,10 @@ export const ItemCreationStep1: React.FC<Step1Props> = ({
           </Tooltip>
         </Flex>
         <Input
-          onChange={e => setItemDistribution(e.target.value)}
+          onChange={e => {
+            const itemDistributionInteger = e.target.value.split('.')[0];
+            setItemDistribution(itemDistributionInteger);
+          }}
           type="number"
           value={itemDistribution}
         />

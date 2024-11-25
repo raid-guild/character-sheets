@@ -292,7 +292,9 @@ const RequirementNodeEditor: React.FC<{
               w="16.875rem"
               onChange={e => {
                 setAsset(asset =>
-                  asset ? { ...asset, amount: e.target.value } : asset,
+                  asset
+                    ? { ...asset, amount: e.target.value.split('.')[0] }
+                    : asset,
                 );
               }}
               placeholder="amount"
