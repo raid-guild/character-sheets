@@ -160,7 +160,7 @@ export const GiveItemsModal: React.FC = () => {
           <FormControl isInvalid={showError}>
             <FormLabel>Amount</FormLabel>
             <Input
-              onChange={e => setAmount(e.target.value)}
+              onChange={e => setAmount(e.target.value.split('.')[0])}
               type="number"
               value={amount}
             />

@@ -1,3 +1,5 @@
+import { Cache } from 'memory-cache';
+
 import {
   CharacterInfoFragment,
   ClassInfoFragment,
@@ -17,8 +19,6 @@ import {
   Item,
   Metadata,
 } from './types';
-
-import { Cache } from 'memory-cache';
 
 const IPFS_GATEWAYS = [
   `https://ipfs.io`,
